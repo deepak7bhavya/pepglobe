@@ -650,16 +650,19 @@
           <div id="errormessage"></div>
 
           <div class="wrapper">
-		  <form id="contact-form" class="form-validate form-horizontal contactForm" name="dataform">
+		  <form id="contact-form" class="form-validate form-horizontal contactForm" name="dataform" onsubmit="return validate(this)" action="abcc.html">
 			<div class = "contact-form">
 				<div class = "input-fields">
-				<input type="text" class="input" id="txt_name" placeholder="Name*">
-				<input type="text" class="input" id="txt_email" placeholder="Email*">
-				<input type="text" class="input" id="txt_phone" placeholder="Phone Number*">
-				<input type="text" class="input" id="txt_skype" placeholder="Skype /  Googletalk Id">
-				<div class = "msg"> <textarea id="txt_message" class="input" placeholder="Message"></textarea> </div>
+				<input type="text" class="input" required id="txt_name" placeholder="Name*" pattern="[a-z A-Z]+">
+        <!-- <input type="email" class="input" required id="txt_email" placeholder="Email*" pattern="[a-z0-9]*[@][a-z]*[/.][a-z]*"> -->
+        <input type="email" class="input" required id="txt_email" placeholder="Email*">
+				<input type="tel" class="input" required id="txt_phone" placeholder="Phone Number*" pattern="[0-9]+">
+				<input type="text" class="input" required id="txt_skype" placeholder="Skype /  Googletalk Id" maxlength="50">
+				<div class = "msg"> 
+          <textarea id="txt_message" class="input" required placeholder="Message"></textarea> 
+        </div>
 				
-				<button type="submit" class="btn">Schedule a Free Consultation</button>
+				<input type="submit" class="btn" value="Schedule a Free Consultation"/>
 			</div>
 				
 
