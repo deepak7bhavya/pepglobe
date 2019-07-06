@@ -138,27 +138,27 @@ function validate(form){
   skype = document.getElementById("txt_skype");
   textMsg = document.getElementById("txt_message");
 
-  if(name.checkValidity() === false){
+  if(name.checkValidity() === false || name.value.trim()==""){
     window.alert("Invalid Name");
     name.style.color = "red"
     return false;
   }
-  if(email.checkValidity() === false){
+  if(email.checkValidity() === false || email.value.trim()==""){
     window.alert("Invalid email id");
     email.style.color = "red"
     return false;
   }
-  if(phone.checkValidity() === false){
+  if(phone.checkValidity() === false || phone.value.trim()==""){
     window.alert("Invalid phone");
     phone.style.color = "red"
     return false;
   }
-  if(skype.checkValidity() === false){
+  if(skype.checkValidity() === false || skype.value.trim()==""){
     window.alert("Invalid Skpe");
     skype.style.color = "red"
     return false;
   }
-  if(textMsg.checkValidity() === false){
+  if(textMsg.checkValidity() === false || textMsg.value.trim()==""){
     window.alert("Invalid TextMessage");
     textMsg.style.color = "red"
     return false;
